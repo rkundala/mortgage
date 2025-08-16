@@ -1,0 +1,16 @@
+#!/bin/sh
+MAVEN_VERSION=3.8.6
+MVN_CMD="mvn"
+
+if [ -n "$1" ]; then
+  MVN_CMD="$1"
+fi
+
+# Check if Maven is installed
+if ! command -v $MVN_CMD &> /dev/null; then
+  echo "Maven could not be found. Please install Maven or specify a different command."
+  exit 1
+fi
+
+# Execute Maven command
+$MVN_CMD "$@"
