@@ -1,2 +1,0 @@
-# mortgage
-Mortgage platform
